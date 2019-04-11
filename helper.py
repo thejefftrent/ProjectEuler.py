@@ -50,3 +50,14 @@ def find_factors(x:int) -> list:
             factors.append(i)
     factors.append(x)
     return factors
+
+def factors(x:int) -> int:
+    count = 1 #for 1
+    #if is_prime(x):
+    #    count += 1
+    #    return count
+    for i in range(2, int(x/2)+1):
+        if x % i == 0:
+            count += 1
+    count += 1
+    return count
