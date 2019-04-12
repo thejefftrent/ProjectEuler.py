@@ -24,6 +24,14 @@ def int_list_product(l) -> int:
         p *= i
     return p
 
+def int_list_sum(l) -> int:
+    if not l:
+        return 0
+    p = 0
+    for i in l:
+        p += i
+    return p
+
 def find_prime_factors(x:int) -> list:
     factors = list()
     if is_prime(x):
@@ -49,6 +57,18 @@ def find_factors(x:int) -> list:
         if x % i == 0:
             factors.append(i)
     factors.append(x)
+    return factors
+
+def find_proper_factors(x:int) -> list:
+    factors = list()
+    factors.append(1)
+    if is_prime(x):
+        #factors.append(x)
+        return factors
+    for i in range(2, int(x/2)+1):
+        if x % i == 0:
+            factors.append(i)
+    #factors.append(x)
     return factors
 
 def factors(x:int) -> int:
