@@ -1,4 +1,12 @@
-#def nth_permutation(x, n):
+def nth_permutation(x, n):
+    permutations = []
+    for i in range(x):
+        permutation = []
+        for j in range(x):
+            for k in range(x):
+                permutation.append(k)
+
+
 
 
 
